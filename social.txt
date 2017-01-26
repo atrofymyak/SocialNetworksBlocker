@@ -1,0 +1,8 @@
+127.0.0.1 vk.com www.vk.com
+127.0.0.1 ok.ru www.ok.ru
+127.0.0.1 facebook.com www.facebook.com
+127.0.0.1 youtube.com www.youtube.com
+127.0.0.1 twitter.com www.twitter.com
+127.0.0.1 instagram.com www.instagram.com
+127.0.0.1 ask.fm www.ask.fm
+127.0.0.1 flickr.com www.flickr.com
