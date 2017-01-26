@@ -1,6 +1,5 @@
 package com;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,14 +10,11 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import org.apache.commons.io.IOUtils;
-
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException {
 		for (;;) {
-			IOUtils.copy(new FileInputStream("c:\\Windows\\System32\\drivers\\etc\\hosts"),
-					new FileOutputStream("hosts"));
+			Files.copy(Paths.get("c:\\Windows\\System32\\drivers\\etc\\hosts"), new FileOutputStream("hosts"));
 
 			GregorianCalendar cal = new GregorianCalendar();
 			try {
@@ -27,7 +23,7 @@ public class Main {
 
 			}
 
-			IOUtils.copy(new FileInputStream("hosts"), new FileOutputStream("hosts1"));
+			Files.copy(Paths.get("hosts"), new FileOutputStream("hosts1"));
 			List<String> social = Files.readAllLines(Paths.get("social.txt"));
 			List<String> lines = Files.readAllLines(Paths.get("hosts1"));
 			System.out.println(cal.getTime());
